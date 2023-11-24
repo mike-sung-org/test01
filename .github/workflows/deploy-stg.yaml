@@ -8,6 +8,8 @@ on:
 jobs:
   deployment:
     runs-on: ubuntu-latest
+    environment: 
+      name: Staging
     env:
       TEST_VAR: ${{ vars.TEST_VAR }}
     steps:
