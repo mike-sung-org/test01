@@ -1,0 +1,11 @@
+name: Status Check
+
+on:
+  status
+jobs:
+  
+  if_error_or_failure: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo The status is error or failed: $DESCRIPTION
