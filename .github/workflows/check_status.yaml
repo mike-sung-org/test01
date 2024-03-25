@@ -1,13 +1,12 @@
 name: Status Check
 
 on:
-  deployment_status
+  check_suite
 jobs:
   
   spectacles: 
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo url : ${{ github.event.deployment_status.target_url }}
-          echo status : ${{ github.event.deployment_status.state }}
+          echo url : ${{ github.event.check_suite }}
 
