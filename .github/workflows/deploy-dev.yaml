@@ -15,4 +15,5 @@ jobs:
     steps:
       - name: deploy
         run: |
-          echo "deployment succeeded! TEST_VAR=${TEST_VAR}"
+          echo "deployment failed! TEST_VAR=${TEST_VAR}"
+          return 1
