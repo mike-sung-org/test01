@@ -19,12 +19,12 @@ jobs:
           echo "deployment completed! TEST_VAR=${TEST_VAR}"
         # continue-on-error: true
       - name: Check on success
-        if: ${{ steps.deploy.status  }} == 'success'
+        if: steps.deploy.status == 'success'
         run: |
           echo "deployment success status  ${{ steps.deploy.status  }}"
           exit 0
       - name: Check on failures
-        if: ${{ steps.deploy.status  }} == 'failure'
+        if: steps.deploy.status == 'failure'
         run: |
           echo "deployment failed status  ${{ steps.deploy.status  }}"
           exit 1
