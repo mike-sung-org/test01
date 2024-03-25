@@ -25,7 +25,7 @@ jobs:
           echo "deployment success outcome  ${{ steps.deploy.outcome  }}"
           exit 0
       - name: Check on failures
-        if: steps.deploy.outcome == 'failure'
+        if: steps.deploy.outcome != 'success'
         run: |
           echo "deployment failed outcome  ${{ steps.deploy.outcome  }}"
           exit 1
