@@ -10,13 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Development
-    env:
-      TEST_VAR: ${{ vars.TEST_VAR }}
     steps:
       - name: deploy
         id: deploy
         run: |
-          echo "deployment completed! TEST_VAR=${TEST_VAR}"
+          echo "deployment completed!"
           exit 0
         continue-on-error: true
       - name: Check on success
