@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "deployment completed! TEST_VAR=${TEST_VAR}"
           exit 0
-        continue-on-error: true
+        # continue-on-error: true
       - name: Check on failures
         if: (${{ steps.deploy.outcome }} == 'failure')
         run: |
