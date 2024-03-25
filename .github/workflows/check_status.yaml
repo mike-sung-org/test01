@@ -1,11 +1,13 @@
 name: Status Check
 
 on:
-  status
+  deployment_status
 jobs:
   
-  if_error_or_failure: 
+  spectacles: 
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo The status is error or failed: $DESCRIPTION
+          echo url : {{ github.event.deployment_status.target_url }}
+          echo status : {{ github.event.deployment_status.state }}
+
