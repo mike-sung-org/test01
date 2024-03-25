@@ -5,6 +5,7 @@ on:
 jobs:
   
   spectacles: 
+    if: github.event.check_suite.conclusion == 'failure'
     runs-on: ubuntu-latest
     steps:
       - run: |
