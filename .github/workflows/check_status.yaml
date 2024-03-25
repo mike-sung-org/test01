@@ -1,12 +1,14 @@
 name: Status Check
 
 on:
-  check_run
+  check_suite
 jobs:
   
   spectacles: 
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo url : ${{ github.event.check_run.status }}
+          echo status : ${{ github.event.check_suite.status }}
+          echo url : ${{ github.event.check_suite.url }}
+          echo check_runs_url  : ${{ github.event.check_suite.check_runs_url  }}
 
