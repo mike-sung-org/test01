@@ -15,7 +15,7 @@ jobs:
         id: deploy
         run: |
           echo "deployment completed!"
-          exit 0
+          exit 1
         continue-on-error: true
       - name: Check on success
         if: steps.deploy.outcome == 'success'
