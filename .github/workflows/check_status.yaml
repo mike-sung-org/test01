@@ -9,6 +9,7 @@ jobs:
     steps:
       - run: |
           echo status : ${{ github.event.check_suite.status }}
+          echo conclusion : ${{ github.event.check_suite.conclusion }}
           echo url : ${{ github.event.check_suite.url }}
           echo check_runs_url  : ${{ github.event.check_suite.check_runs_url  }}
 
