@@ -12,6 +12,5 @@ jobs:
       name: Development
     steps:
       - name: deploy
-        id: deploy
         run: |
-          echo "deployment completed!"
+          echo "deployment succeeded! TEST_VAR=${TEST_VAR}"
