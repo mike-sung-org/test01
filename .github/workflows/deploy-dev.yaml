@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Development
-    env:
-      TEST_VAR: ${{ vars.TEST_VAR }}
     steps:
       - name: deploy
         run: |
