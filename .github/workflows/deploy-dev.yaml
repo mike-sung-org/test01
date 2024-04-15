@@ -15,16 +15,3 @@ jobs:
         id: deploy
         run: |
           echo "deployment completed!"
-          exit 1
-        continue-on-error: true
-      - name: Check on success
-        if: steps.deploy.outcome == 'success'
-        run: |
-          echo "deployment success outcome  ${{ steps.deploy.outcome  }}"
-          exit 0
-      - name: Check on failures
-        if: steps.deploy.outcome != 'success'
-        run: |
-          echo "deployment failed outcome  ${{ steps.deploy.outcome  }}"
-          exit 1
-
