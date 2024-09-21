@@ -1,4 +1,4 @@
 update on main
-main 1
+main
 
 f101 2
